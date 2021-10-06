@@ -4,8 +4,8 @@ image: "dv.jpg"
 links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/davi-lucena-110b09218/"
-  - label: Twitter
-    url: "https://twitter.com/crookedrain2"
+  - label: Portfólio
+    url: ""
   - label: GitHub
     url: "https://github.com/dvluc"
   - label: Email
