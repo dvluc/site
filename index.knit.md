@@ -1,0 +1,46 @@
+---
+title: "Davi Lucena"
+image: "dv.jpg"
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/davi-lucena-110b09218/"
+  - label: Portfólio
+    url: ""
+  - label: GitHub
+    url: "https://github.com/dvluc"
+  - label: Email
+    url: "mailto:lucenadv@gmail.com"
+output:
+  postcards::trestles
+---
+ 
+## Bio
+
+Especialista em Normas e Gestão Educacional, com experiência em consultoria para gestores e equipes técnicas na área educacional e administrativa, com foco na construção de metodologias, políticas, programas, escrita e editoração de livros e documentos oficiais. Sólido conhecimento na análise de dados e construção de dashboards.
+
+## Formação
+
+**Universidade de Fortaleza** | Fortaleza, CE
+
+MBA em Ciência de Dados | 2021 - Atual
+
+**Universidade Federal do Ceará** | Fortaleza, CE
+
+Ciências Econômicas | 2021 - Atual
+
+**Universidade Estácio de Sá** | Fortaleza, CE
+
+Ciências Contábeis | 2018 - 2021
+
+**Universidade Federal do Ceará** | Fortaleza, CE
+
+Bacharelado e Licenciatura em Filosofia | 2015 - 2018
+
+## Experiência
+
+**Conselho Nacional dos Secretários de Educação** | Consultor | Maio 2021 - Atual
+
+**Centro de Estudos em Pesquisa Educacional** | Bolsista | Outubro 2021 - Atual 
+
+**Universidade de Fortaleza** | Assistente do Núcleo de Avaliação Institucional | Junho 2018 - Setembro 2021
+
