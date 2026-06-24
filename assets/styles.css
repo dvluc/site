@@ -1,0 +1,175 @@
+/* ============================================================
+   Davi Lucena — site pessoal
+   Tema: claro, moderno e clean. Sem dependências externas
+   além das fontes do Google. Editável diretamente.
+   ============================================================ */
+
+:root {
+  --bg:        #fbfbfa;
+  --surface:   #ffffff;
+  --text:      #1c1d1f;
+  --muted:     #6b6f76;
+  --line:      #e7e6e3;
+  --accent:    #c2410c;   /* laranja queimado, ecoa a foto */
+  --accent-soft: #fdf1ea;
+  --max:       820px;
+  --radius:    14px;
+  --shadow:    0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.05);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Language toggle ---------- */
+/* PT é o padrão: mostra .lang-pt, esconde .lang-en.            */
+[data-lang="pt"] .lang-en { display: none; }
+[data-lang="en"] .lang-pt { display: none; }
+
+/* ---------- Top bar ---------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: .9rem clamp(1rem, 4vw, 2rem);
+  background: rgba(251,251,250,.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.brand { font-weight: 700; color: var(--text); letter-spacing: -.02em; }
+.nav { display: flex; gap: 1.25rem; margin-left: auto; }
+.nav a { color: var(--muted); font-size: .92rem; font-weight: 500; }
+.nav a:hover { color: var(--text); text-decoration: none; }
+
+.lang-toggle {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  font: 600 .8rem "Inter", sans-serif;
+  padding: .35rem .7rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.lang-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ---------- Layout ---------- */
+main { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
+
+.section { padding: 2.6rem 0; border-top: 1px solid var(--line); }
+.section h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 1.4rem;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.2rem, 4vw, 2.5rem);
+  padding: clamp(2.5rem, 7vw, 4.5rem) 0 2.6rem;
+}
+.hero-photo img {
+  width: clamp(120px, 28vw, 200px);
+  height: clamp(120px, 28vw, 200px);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+.hero-text h1 {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(2.2rem, 7vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: -.02em;
+  margin: 0 0 .5rem;
+}
+.tagline { font-size: 1.05rem; color: var(--muted); margin: 0 0 1.2rem; max-width: 46ch; }
+
+.links { list-style: none; display: flex; flex-wrap: wrap; gap: .55rem; padding: 0; margin: 0; }
+.links a {
+  display: inline-block;
+  padding: .4rem .9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: .9rem;
+  font-weight: 500;
+  transition: border-color .15s, color .15s, background .15s;
+}
+.links a:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+
+/* ---------- Timeline (formação / experiência) ---------- */
+.timeline { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.4rem; }
+.timeline li {
+  padding-left: 1.2rem;
+  border-left: 2px solid var(--line);
+  position: relative;
+}
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -6px; top: .45rem;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.tl-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .3rem 1rem; }
+.tl-title { font-weight: 600; }
+.tl-date { color: var(--muted); font-size: .9rem; white-space: nowrap; }
+.tl-org { color: var(--muted); font-size: .95rem; }
+
+/* ---------- Skills / chips ---------- */
+.sub { font-size: 1rem; margin: 1.8rem 0 .8rem; }
+.sub:first-of-type { margin-top: 0; }
+.chips { list-style: none; display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; margin: 0; }
+.chips li {
+  padding: .35rem .8rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 999px;
+  font-size: .88rem;
+  font-weight: 500;
+}
+.muted { color: var(--muted); }
+
+/* ---------- Footer ---------- */
+.footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2.5rem clamp(1rem, 4vw, 2rem) 3.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 560px) {
+  .hero { flex-direction: column; text-align: center; }
+  .nav { display: none; }
+  .links { justify-content: center; }
+  .tl-head { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
