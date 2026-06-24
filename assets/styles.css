@@ -185,11 +185,6 @@ main { display: block; }
   padding: .35rem .75rem; background: var(--accent-soft); color: var(--accent);
   border-radius: 999px; font-size: .82rem; font-weight: 500;
 }
-.langs { list-style: none; padding: 0; margin: 0; display: grid; gap: .85rem; }
-.lang-row { display: flex; justify-content: space-between; font-size: .9rem; margin-bottom: .3rem; }
-.lang-lvl { color: var(--muted); }
-.meter { display: block; height: 6px; background: var(--line); border-radius: 999px; overflow: hidden; }
-.meter i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
 
 /* ---------- Cards (formação) ---------- */
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }

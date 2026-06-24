@@ -1,7 +1,7 @@
 # Site pessoal — Davi Lucena
 
 Site pessoal estático (one-page), bilíngue **PT/EN**, hospedado no **GitHub Pages**
-sob o domínio próprio [davilucena.com](https://davilucena.com).
+em [dvluc.github.io/site](https://dvluc.github.io/site/).
 
 > **Histórico:** a versão anterior era gerada em R Markdown com o pacote
 > [`postcards`](https://github.com/seankross/postcards). Em 2026 o site foi
@@ -29,7 +29,6 @@ para download em `assets/curriculo-lattes-davi-lucena.pdf` e vinculado ao
 │   ├── script.js       # Idioma + ano no rodapé + revelação ao rolar
 │   └── curriculo-lattes-davi-lucena.pdf   # CV completo (download)
 ├── dv.jpg              # Foto / favicon / imagem de preview social
-├── CNAME               # Domínio próprio do GitHub Pages (davilucena.com)
 ├── legacy/             # Versão antiga em R Markdown (postcards), apenas arquivo
 └── README.md
 ```
@@ -68,7 +67,8 @@ python3 -m http.server 8000   # depois acesse http://localhost:8000
 ## Publicação (GitHub Pages)
 
 O site é servido da branch configurada em **Settings → Pages** do repositório
-`dvluc/site`. Qualquer push para essa branch publica automaticamente.
+`dvluc/site` e fica disponível em <https://dvluc.github.io/site/>. Qualquer push
+para essa branch publica automaticamente.
 
 ```bash
 git add -A
@@ -76,5 +76,5 @@ git commit -m "atualiza conteúdo do site"
 git push
 ```
 
-O arquivo `CNAME` mantém o domínio `davilucena.com` apontado para o GitHub Pages
-(o DNS do domínio deve ter um registro `CNAME`/`ALIAS` para `dvluc.github.io`).
+Por ser uma _project page_ (`/site/`), todos os caminhos de arquivos no HTML são
+**relativos** (`assets/...`, `dv.jpg`) — não use caminhos iniciados em `/`.
