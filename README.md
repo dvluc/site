@@ -9,14 +9,25 @@ sob o domínio próprio [davilucena.com](https://davilucena.com).
 > total de layout e permitir edição direta — sem etapa de compilação. Os arquivos
 > R antigos ficaram preservados em [`legacy/`](legacy/).
 
+## Seções
+
+`Sobre` · `Formação` (graduação e pós) · `Experiência` (linha do tempo) ·
+`Publicações & produção` (artigos, capítulos e outras produções).
+
+O conteúdo foi extraído do **Currículo Lattes** (fonte autoritativa), disponível
+para download em `assets/curriculo-lattes-davi-lucena.pdf` e vinculado ao
+[perfil Lattes](http://lattes.cnpq.br/1520113162103673) e ao
+[ORCID](https://orcid.org/0000-0002-1858-4222).
+
 ## Estrutura
 
 ```
 .
 ├── index.html          # Conteúdo do site (todas as seções, PT e EN no mesmo HTML)
 ├── assets/
-│   ├── styles.css      # Estilos — tema claro, variáveis CSS no topo do arquivo
-│   └── script.js       # Alternância de idioma + ano automático no rodapé
+│   ├── styles.css      # Estilos — tema, variáveis CSS no topo do arquivo
+│   ├── script.js       # Idioma + ano no rodapé + revelação ao rolar
+│   └── curriculo-lattes-davi-lucena.pdf   # CV completo (download)
 ├── dv.jpg              # Foto / favicon / imagem de preview social
 ├── CNAME               # Domínio próprio do GitHub Pages (davilucena.com)
 ├── legacy/             # Versão antiga em R Markdown (postcards), apenas arquivo
