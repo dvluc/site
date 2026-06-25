@@ -72,9 +72,9 @@ strong { font-weight: 600; }
 main { display: block; }
 .section {
   max-width: var(--max); margin: 0 auto;
-  padding: clamp(2.8rem, 6vw, 4.5rem) clamp(1rem, 5vw, 2.5rem);
+  padding: clamp(2rem, 4vw, 3.2rem) clamp(1rem, 5vw, 2.5rem);
 }
-.sec-head { display: flex; align-items: baseline; gap: .8rem; margin-bottom: 2rem; }
+.sec-head { display: flex; align-items: baseline; gap: .8rem; margin-bottom: 1.5rem; }
 .sec-kicker {
   font-family: var(--serif); font-size: 1rem; color: var(--accent);
   font-weight: 600; letter-spacing: .05em;
@@ -261,7 +261,8 @@ main { display: block; }
 .pub h4 { font-size: 1.02rem; font-weight: 600; color: var(--ink); margin-bottom: .25rem; line-height: 1.35; }
 .pub-link { color: inherit; transition: color .15s; }
 .pub-link:hover { color: var(--accent); }
-.pub-meta { font-size: .88rem; color: var(--muted); }
+.pub-meta { font-size: .88rem; color: var(--ink-soft); }
+.pub-desc { font-size: .9rem; color: var(--muted); margin-top: .35rem; }
 .pub-cta { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.8rem; }
 
 /* link de acesso evidente (publicações e portfólio) */

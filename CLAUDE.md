@@ -46,8 +46,12 @@ das duas versões** (PT e EN). Na navegação, os labels usam `data-pt`/`data-en
 
 ## Seções (ordem) e como editar
 
-`Hero` → `Destaques` → `01 Sobre` → `02 Formação` → `03 Experiência` →
-`04 Portfólio` → `05 Publicações` → rodapé.
+`Hero` → `Destaques` → `01 Sobre` → `02 Formação` → `03 Comissões` →
+`04 Experiência` → `05 Portfólio` → `06 Publicações` → rodapé.
+
+- **Comissões:** participação em comissões oficiais (publicação no Diário Oficial).
+  Cada item é um `<article class="pub">` em `#comissoes` com `.pub-desc` e link de
+  acesso (DOU oficial quando houver URL, ou PDF em `assets/`).
 
 - **Conteúdo / textos / datas:** editar direto em `index.html`.
 - **Cores, fontes, espaçamento:** variáveis no `:root` de `assets/styles.css`.
