@@ -152,7 +152,7 @@ main { display: block; }
 .highlights {
   max-width: var(--max); margin: 0 auto;
   padding: 0 clamp(1rem, 5vw, 2.5rem);
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+  display: grid; grid-template-columns: 1.9fr 1fr; gap: 1rem;
   transform: translateY(-1.5rem);
 }
 .hl-card {
@@ -163,11 +163,36 @@ main { display: block; }
 .hl-ico {
   display: inline-flex; width: 42px; height: 42px; border-radius: 12px;
   align-items: center; justify-content: center; margin-bottom: .8rem;
-  background: var(--accent-soft); color: var(--accent);
+  background: var(--accent-soft); color: var(--accent); flex-shrink: 0;
 }
 .hl-ico svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .hl-card h3 { font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: .25rem; }
 .hl-card p { font-size: .88rem; color: var(--muted); }
+
+/* destaque do cargo atual */
+.hl-feature {
+  display: flex; gap: 1.1rem; align-items: flex-start;
+  background: var(--ink); color: #fff; border-radius: var(--radius);
+  padding: 1.5rem; box-shadow: var(--shadow-lg);
+  background-image: radial-gradient(80% 120% at 100% 0%, rgba(180,83,9,.45), transparent 55%);
+}
+.hl-feature .hl-ico { background: rgba(255,255,255,.12); color: #fff; margin-bottom: 0; }
+.hl-now {
+  font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em;
+  color: #f0c89b; margin-bottom: .35rem;
+}
+.hl-feature h3 { font-family: var(--serif); font-size: 1.45rem; font-weight: 600; color: #fff; line-height: 1.2; }
+.hl-sub { font-size: .9rem; color: rgba(255,255,255,.82); margin-top: .4rem; }
+.hl-dl {
+  display: inline-flex; align-items: center; gap: .4rem; margin-top: 1rem;
+  font-size: .85rem; font-weight: 500; color: #fff;
+  border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: .4rem .85rem;
+  transition: background .15s, border-color .15s;
+}
+.hl-dl:hover { background: rgba(255,255,255,.14); border-color: #fff; text-decoration: none; }
+
+/* ícones de marca (LinkedIn, GitHub, ORCID) */
+.bi { width: 1.1em; height: 1.1em; fill: currentColor; flex-shrink: 0; }
 
 /* ---------- Sobre ---------- */
 .js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
@@ -234,32 +259,59 @@ main { display: block; }
   flex-shrink: 0; min-width: 3.2rem;
 }
 .pub h4 { font-size: 1.02rem; font-weight: 600; color: var(--ink); margin-bottom: .25rem; line-height: 1.35; }
+.pub-link { color: inherit; transition: color .15s; }
+.pub-link:hover { color: var(--accent); }
 .pub-meta { font-size: .88rem; color: var(--muted); }
-.misc { list-style: none; padding: 0; margin: 0; display: grid; gap: .7rem; }
-.misc li { display: flex; gap: .9rem; font-size: .92rem; color: var(--ink-soft); }
-.misc-year { font-weight: 600; color: var(--accent); flex-shrink: 0; min-width: 3rem; }
 .pub-cta { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.8rem; }
+
+/* link de acesso evidente (publicações e portfólio) */
+.access {
+  display: inline-flex; align-items: center; gap: .35rem; margin-top: .6rem;
+  color: var(--accent); font-weight: 600; font-size: .9rem;
+}
+.access:hover { text-decoration: none; gap: .55rem; }
+.access span[aria-hidden] { transition: transform .15s; }
+
+/* ---------- Portfólio ---------- */
+.sec-intro { color: var(--ink-soft); font-size: 1.02rem; margin: -1rem 0 1.6rem; max-width: 60ch; }
+.work { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.1rem; }
+.work-card {
+  display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 1.4rem; box-shadow: var(--shadow-sm);
+  border-top: 3px solid var(--accent); transition: transform .18s, box-shadow .18s;
+}
+.work-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.work-top { display: flex; align-items: center; gap: .6rem; margin-bottom: .9rem; }
+.work-ico {
+  display: inline-flex; width: 38px; height: 38px; border-radius: 10px; flex-shrink: 0;
+  align-items: center; justify-content: center; background: var(--accent-soft); color: var(--accent);
+}
+.work-ico svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.work-type {
+  font-size: .74rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em;
+  color: var(--accent-2); background: rgba(15,110,86,.09); padding: .25rem .6rem; border-radius: 999px;
+}
+.work-title { color: var(--ink); }
+.work-title:hover { color: var(--accent); }
+.work-card h4 { font-size: 1.1rem; font-weight: 600; line-height: 1.3; }
+.work-org { font-size: .88rem; color: var(--ink-soft); margin-top: .2rem; }
+.work-desc { font-size: .9rem; color: var(--muted); margin-top: .6rem; }
+.work-card .access { margin-top: auto; padding-top: .9rem; }
 
 /* ---------- Footer ---------- */
 .footer { border-top: 1px solid var(--line); background: var(--surface); margin-top: 2rem; }
 .footer-inner {
   max-width: var(--max); margin: 0 auto;
-  padding: 2.4rem clamp(1rem, 5vw, 2.5rem) 1.4rem;
-  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.2rem;
+  padding: 2.2rem clamp(1rem, 5vw, 2.5rem);
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 1.2rem;
 }
-.footer-name { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; color: var(--ink); }
-.footer-sub { font-size: .9rem; color: var(--muted); }
-.footer-links { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 1.4rem; align-items: center; justify-content: center; }
 .footer-links a { color: var(--ink-soft); font-size: .9rem; font-weight: 500; }
 .footer-links a:hover { color: var(--accent); }
-.footer-copy {
-  max-width: var(--max); margin: 0 auto;
-  padding: 0 clamp(1rem, 5vw, 2.5rem) 2.4rem; font-size: .82rem; color: var(--muted);
-}
 
 /* ---------- Responsivo ---------- */
 @media (max-width: 880px) {
-  .highlights { grid-template-columns: repeat(2, 1fr); }
+  .highlights { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 620px) {

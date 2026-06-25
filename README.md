@@ -12,12 +12,22 @@ em [dvluc.github.io/site](https://dvluc.github.io/site/).
 ## Seções
 
 `Sobre` · `Formação` (graduação e pós) · `Experiência` (linha do tempo) ·
-`Publicações & produção` (artigos, capítulos e outras produções).
+`Portfólio` (produtos e ações, com links de acesso) · `Publicações` (artigos e capítulo).
 
 O conteúdo foi extraído do **Currículo Lattes** (fonte autoritativa), disponível
 para download em `assets/curriculo-lattes-davi-lucena.pdf` e vinculado ao
 [perfil Lattes](http://lattes.cnpq.br/1520113162103673) e ao
 [ORCID](https://orcid.org/0000-0002-1858-4222).
+
+> **Pendência:** o botão "Baixar cartão de visita" (no card de cargo atual) aponta
+> para `assets/cartao-visita-davi-lucena.jpg`. Coloque a imagem do cartão nesse
+> caminho/nome para o download funcionar.
+
+### Adicionar itens ao portfólio
+
+O portfólio cresce com o tempo. Para incluir um novo produto, copie um bloco
+`<article class="work-card">` em `index.html` (seção `#portfolio`), ajustando tipo,
+ano, título, link e descrição (PT e EN).
 
 ## Estrutura
 
